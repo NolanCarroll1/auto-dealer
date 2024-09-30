@@ -1,0 +1,246 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/*  Apply a natural box layout model to all elements  */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+} // end all elements
+
+/* --------------------------- BODY --------------------------- */
+body {
+  font-family: $defaultFont;
+  font-weight: $lightWeight;
+  min-width: 320px;
+}
+
+/* --------------------------- HEADER --------------------------- */
+#headerWrapper {
+  border-bottom: 1px solid $greyColor;
+}
+header {
+  display: grid;
+  grid-template-columns: 50px auto;
+  column-gap: $gutter;
+  align-items: center; //vertically
+  padding: 0.5rem $gutter;
+  span {
+    font-size: 1.6rem;
+    font-weight: $lightWeight;
+    color: $primaryColor;
+    padding-left: 0.5rem;
+  }
+} // end header
+a.phone {
+  position: absolute;
+  right: 2%;
+  top: 7%;
+  text-decoration: none;
+  color: $primaryColor;
+}
+a.phone:hover {
+  text-decoration: underline;
+}
+/* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
+#theBtn::before {
+  content: "\2630";
+}
+#theBtn {
+  border: none;
+  background: none;
+  font-size: 2rem;
+  padding: 0;
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+#theNav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #ddd;
+  li a {
+    color: $primaryColor;
+    display: block;
+    padding: 0.75rem $gutter;
+    text-decoration: none;
+    border-bottom: 1px solid $greyColor;
+  }
+  li.active a {
+    color: $secondaryColor;
+  }
+}
+#theBtn.open::before {
+  content: "\2715";
+}
+#theNav {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.5s ease-out;
+  ul {
+    overflow: hidden;
+  }
+}
+#theNav.open {
+  grid-template-rows: 1fr;
+}
+
+/* --------------------------- MAIN --------------------------- */
+.hero {
+  position: relative;
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  p {
+    position: absolute;
+    top: calc(50% - 33px);
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    color: $primaryColor;
+  }
+}
+
+main {
+  h1 {
+    padding: 1rem $gutter.5rem $gutter;
+    font-size: 1.5rem;
+    color: $secondaryColor;
+    font-weight: $lightWeight;
+  }
+  p {
+    padding: 0.5rem $gutter;
+    color: #333;
+    line-height: $leading;
+  }
+} // end main
+div.myWrapper {
+  padding: 2rem 0;
+  text-align: center;
+}
+#cardsR {
+  text-align: center;
+  padding: 0 $gutter;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 24px 8px;
+  section {
+    border: 1px $greyColor solid;
+    padding: 1rem;
+    text-align: center;
+    img {
+      width: 20px;
+      padding-top: 0.5rem;
+    }
+  }
+  h3 {
+    margin: 2rem $gutter 0 $gutter;
+    text-align: center;
+    color: #000;
+    font-weight: $boldWeight;
+  }
+  p {
+    font-size: $lightWeight;
+    font-style: italic;
+  }
+}
+#cardsS {
+  text-align: center;
+  padding: 0 $gutter;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 24px 8px;
+  section {
+    border: 1px $greyColor solid;
+    padding: 1rem;
+    text-align: center;
+    img {
+      width: 100px;
+    }
+}
+    .shake:hover img {
+        animation: myShake 1s 2;
+      }
+      @keyframes myShake {
+        0% {
+          transform: translate(1px, 1px) rotate(0deg);
+        }
+        10% {
+          transform: translate(-1px, -2px) rotate(-1deg);
+        }
+        20% {
+          transform: translate(-3px, 0px) rotate(1deg);
+        }
+        30% {
+          transform: translate(3px, 2px) rotate(0deg);
+        }
+        40% {
+          transform: translate(1px, -1px) rotate(1deg);
+        }
+        50% {
+          transform: translate(-1px, 2px) rotate(-1deg);
+        }
+        60% {
+          transform: translate(-3px, 1px) rotate(0deg);
+        }
+        70% {
+          transform: translate(3px, 1px) rotate(-1deg);
+        }
+        80% {
+          transform: translate(-1px, -1px) rotate(1deg);
+        }
+        90% {
+          transform: translate(1px, 2px) rotate(0deg);
+        }
+        100% {
+          transform: translate(1px, -2px) rotate(-1deg);
+        }
+      }
+
+  h3 {
+    margin: 2rem $gutter 0 $gutter;
+    text-align: center;
+    color: #000;
+    font-weight: $boldWeight;
+  }
+  p {
+    font-weight: $lightWeight;
+  }
+  button {
+    border: none;
+    background-color: $secondaryColor;
+    border-radius: 8px;
+    padding: 1rem;
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+
+/* --------------------------- FOOTER --------------------------- */
+#footerWrapper {
+  background-color: $primaryColor;
+} // end footer wrapper
+
+footer {
+  font-size: 0.85rem;
+  padding: 1rem $gutter;
+  color: $greyColor;
+  text-align: center;
+  line-height: $leading;
+  a {
+    color: $greyColor;
+  }
+} // end footer

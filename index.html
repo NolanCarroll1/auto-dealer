@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Navigation Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="css/styles.min.css"
+    />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="headerWrapper">
+      <header>
+        <a href="index.html"
+          ><img
+            src="images/logo1x.png"
+            alt="logo"
+            width="60"
+            height="60"
+            srcset="
+              images/logo1x.png 1x,
+              images/logo2x.png 2x,
+              images/logo3x.png 3x
+            "
+        /></a>
+        <span>Top Auto Shop</span>
+        <a href="#" class="phone">1-800-555-1234</a>
+      </header>
+    </div>
+    <!-- end header wrapper -->
+
+    <div id="navWrapper">
+      <nav id="theNav">
+        <button id="theBtn"></button>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li class="active"><a href="#">Reviews</a></li>
+          <li><a href="#">Our Team</a></li>
+          <li><a href="#">Book An Appointment</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- end nav wrapper -->
+
+    <div id="mainWrapper">
+      <main>
+        <div class="hero">
+          <img
+            src="images/hero.webp"
+            alt="a minature car on pavement"
+            width="1200"
+            height="733"
+          />
+          <p>We've Got What You're Looking For!</p>
+        </div>
+        <div class="myWrapper">
+            <h1> Our Services</h1>
+            <div id="cardsS">
+                <section class="shake">
+                    <img src="images/user.svg" alt="a default user icon" width="75px" height="75px">
+                    <h3>Customer support</h3>
+                    <p>Our customer support team is dedicated to providing an exceptional experience from the moment you contact us. Whether you have questions about vehicle availability, financing options, or after-sales service, our knowledgeable representatives are ready to assist you. We strive to respond promptly to all inquiries through phone, email, or live chat. Our goal is to make every interaction smooth and hassle-free, ensuring that your needs are met efficiently and courteously. Whether you're a first-time buyer or a returning customer, we are here to support you throughout the entire car-buying or service process.</p>
+                    <button><a href="#">Learn More</a></button>
+                </section>
+                <section class="shake">
+                    <img src="images/calendar.svg" alt="a calendar" width="75px" height="75px">
+                    <h3>Appointments and Walk-ins</h3>
+                    <p>We offer flexible options for both appointments and walk-ins at our dealership. Customers who prefer personalized service can schedule an appointment ahead of time, allowing them to reserve a specific time slot with one of our expert sales or service staff. This ensures dedicated attention and a streamlined experience. However, we also welcome walk-ins at any time during business hours. While appointments help avoid potential waiting times, our team is always ready to assist walk-in customers with browsing our vehicle inventory, discussing financing options, or arranging a test drive. We aim to accommodate everyone, regardless of how they choose to visit.</p>
+                    <button><a href="#">Learn More</a></button>
+                </section>
+                <section class="shake">
+                    <img src="images/phone.svg" alt="a phone" width="75px" height="75px">
+                    <h3>Phone Consultaion</h3>
+                    <p>Our Phone Consultation Service provides you with expert guidance and personalized assistance without the need to visit the dealership. Whether you're exploring vehicle options, seeking advice on financing, or have questions about a specific model's features, our knowledgeable consultants are just a call away. During the consultation, our team will walk you through your inquiries, offer recommendations tailored to your needs, and help you make informed decisions. You can also schedule appointments, request test drives, and get updates on current promotions, all from the convenience of your phone. We’re here to make your car-buying or service experience as smooth and efficient as possible.</p>
+                    <button><a href="#">Learn More</a></button>
+                </section>
+                <section class="shake">
+                    <img src="images/attention.svg" alt="an exclamation point" width="75px" height="75px">
+                    <h3>Roadside Emergency Help</h3>
+                    <p>Our Free Roadside Emergency Help service is here to provide peace of mind whenever you're on the road. Available to all customers, this service ensures that help is just a call away in case of unexpected breakdowns, flat tires, battery issues, or other roadside emergencies. Whether you're stranded with a mechanical problem or need a tow, our team will quickly dispatch assistance to your location at no cost. Our goal is to keep you safe and get you back on the road as quickly as possible, offering reliable support whenever you need it, 24/7.</p>
+                    <button><a href="#">Learn More</a></button>
+                </section>
+            </div>
+          <h1>What our customers are saying!</h1>
+          <div id="cardsR"></div>
+
+        </div>
+      </main>
+    </div>
+    <!-- end main wrapper -->
+
+    <div id="footerWrapper">
+      <footer>
+        <p>
+          Copyright &copy; Nolan Carroll &bull; 2025 
+        </p>
+      </footer>
+    </div>
+    <!-- end footer wrapper -->
+    <script src="js/scripts.js" type="module"></script>
+  </body>
+</html>
