@@ -162,7 +162,7 @@ div.myWrapper {
   gap: 24px 8px;
   section {
     border: 1px $greyColor solid;
-    padding: 1rem;
+    padding: 2rem;
     text-align: center;
     img {
       width: 100px;
@@ -216,16 +216,16 @@ div.myWrapper {
   p {
     font-weight: $lightWeight;
   }
-  button {
-    border: none;
-    background-color: $secondaryColor;
-    border-radius: 8px;
-    padding: 1rem;
-    a {
+  a {
       color: white;
       text-decoration: none;
+      border: none;
+      background-color: $secondaryColor;
+      border-radius: 8px;
+      padding: 1rem;
+  
     }
-  }
+  
 }
 
 

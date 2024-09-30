@@ -475,7 +475,7 @@ div.myWrapper {
 }
 #cardsS section {
   border: 1px #ccc solid;
-  padding: 1rem;
+  padding: 2rem;
   text-align: center;
 }
 #cardsS section img {
@@ -528,15 +528,13 @@ div.myWrapper {
 #cardsS p {
   font-weight: 300;
 }
-#cardsS button {
+#cardsS a {
+  color: white;
+  text-decoration: none;
   border: none;
   background-color: #7c1d47;
   border-radius: 8px;
   padding: 1rem;
-}
-#cardsS button a {
-  color: white;
-  text-decoration: none;
 }
 
 /* --------------------------- FOOTER --------------------------- */
